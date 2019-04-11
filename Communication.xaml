@@ -1,0 +1,53 @@
+﻿<Window x:Class="MyFriendChemistry.Communication"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyFriendChemistry"
+        mc:Ignorable="d"
+        Title="의사소통" Height="384" Width="324" WindowStyle="None" Icon="내친구 화학이.ico" ShowInTaskbar="False" Background="LightGray" ResizeMode="NoResize" MouseDown="Options_MouseDown" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="364" Margin="10,10,0,0" VerticalAlignment="Top" Width="304"/>
+        <TextBox x:Name="Text" HorizontalAlignment="Left" Height="200" Margin="20,91,0,0" TextWrapping="Wrap" Text="제작자에게 하고싶은 말이나&#xA;기초화학지식평가 문제 건의, &#xA;잘못된 정보, &#xA;사용 중 불편한 점등을 &#xA;여기에 써서 보내주세요!" VerticalAlignment="Top" Width="284" FontFamily="Global User Interface" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFB4B4B4"/>
+                    <GradientStop Color="#FFB8B8B8" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="Send" Content="보내기" HorizontalAlignment="Left" Height="24" Margin="20,341,0,0" VerticalAlignment="Top" Width="142" Click="Send_Click"/>
+        <Button x:Name="Cancel" Content="취소" HorizontalAlignment="Left" Height="24" Margin="162,341,0,0" VerticalAlignment="Top" Width="142" Click="Cancel_Click"/>
+        <Label x:Name="label" Content="  제작자에게 하고싶은 말!" HorizontalAlignment="Left" Height="39" Margin="34,20,0,0" VerticalAlignment="Top" Width="254" FontFamily="Global User Interface" FontWeight="Bold" FontSize="21.333"/>
+        <TextBox x:Name="Mail_Title" HorizontalAlignment="Left" Height="32" Margin="20,59,0,0" TextWrapping="Wrap" Text="제목" VerticalAlignment="Top" Width="284" FontFamily="Global User Interface" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFB4B4B4"/>
+                    <GradientStop Color="#FFB8B8B8" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="AnswerEmail" HorizontalAlignment="Left" Height="50" Margin="20,291,0,0" TextWrapping="Wrap" Text="답장을 받고싶은 이메일주소를 써주세요!" VerticalAlignment="Top" Width="284" FontFamily="Global User Interface" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFB4B4B4"/>
+                    <GradientStop Color="#FFB8B8B8" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Rectangle x:Name="Loading" HorizontalAlignment="Left" Height="120" Margin="102,122,0,0" VerticalAlignment="Top" Width="120" RadiusX="45" RadiusY="45" Stroke="#FF005F74" StrokeThickness="5" Visibility="Hidden">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF02E8FF" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="label1" Content="메일 보내는중!" HorizontalAlignment="Left" Height="25" Margin="117,205,0,0" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface" FontWeight="Bold" Visibility="Hidden"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="60" Margin="132,142,0,0" VerticalAlignment="Top" Width="60" Source="내친구 화학이.ico" Visibility="Hidden">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="내친구 화학이.ico" Stretch="Uniform"/>
+            </Image.OpacityMask>
+        </Image>
+    </Grid>
+</Window>

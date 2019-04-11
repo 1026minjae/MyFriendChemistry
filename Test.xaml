@@ -1,0 +1,158 @@
+﻿<Window x:Class="MyFriendChemistry.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyFriendChemistry"
+        mc:Ignorable="d"
+        Title="기초화학지식평가" Height="720" Width="1280" WindowStyle="None" Background="#FFF3BFBF" Icon="내친구 화학이.ico" MouseDown="Test_MouseDown" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="Title" Content="기초화학지식평가 " HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="1000" Foreground="White" FontFamily="Global User Interface" FontWeight="Bold" FontSize="42"/>
+        <Label x:Name="Number" Content="1" HorizontalAlignment="Left" Height="56" Margin="23,70,0,0" VerticalAlignment="Top" Width="240" FontFamily="Global User Interface" FontSize="42" FontWeight="Bold" Foreground="White"/>
+        <Button x:Name="Quit" Content="답 제출" Style ="{StaticResource MidMetal}" HorizontalAlignment="Left" Height="35" Margin="1026,673,0,0" VerticalAlignment="Top" Width="247" Foreground="White" SnapsToDevicePixels="True" FontFamily="Global User Interface" FontSize="11" FontWeight="Bold" Click="Quit_Click"/>
+        <TextBlock x:Name="Page" HorizontalAlignment="Left" Height="35" Margin="238,670,0,0" TextWrapping="Wrap" Text="1/25" VerticalAlignment="Top" Width="360" FontWeight="Bold" TextAlignment="Center" Background="White" FontFamily="Global User Interface" FontSize="31"/>
+        <Button x:Name="Previous" Content="≪" Style="{StaticResource Actinium}" HorizontalAlignment="Left" Height="35" Margin="23,670,0,0" VerticalAlignment="Top" Width="213" Foreground="White" FontFamily="Global User Interface" FontSize="21.333" FontWeight="Bold" Click="Previous_Click"/>
+        <Button x:Name="Next" Content="≫" Style="{StaticResource Actinium}" HorizontalAlignment="Left" Height="35" Margin="601,670,0,0" VerticalAlignment="Top" Width="213" FontFamily="Global User Interface" FontWeight="Bold" FontSize="21.333" Foreground="White" Click="Next_Click"/>
+
+        <TextBlock x:Name="Question" HorizontalAlignment="Left" Height="178" Margin="23,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="790" Background="White" Text="가나다라마바사 아자차카타파하" FontFamily="Global User Interface" FontSize="21"/>
+        <CheckBox x:Name="A1" Content="CheckBox" HorizontalAlignment="Left" Height="29" Margin="23,322,0,0" VerticalAlignment="Top" Width="594" FontFamily="Global User Interface" FontSize="21" Checked="A1_Checked"/>
+        <CheckBox x:Name="A2" Content="CheckBox" HorizontalAlignment="Left" Height="29" Margin="23,354,0,0" VerticalAlignment="Top" Width="594" FontFamily="Global User Interface" FontSize="21" Checked="A2_Checked"/>
+        <CheckBox x:Name="A3" Content="CheckBox" HorizontalAlignment="Left" Height="29" Margin="23,386,0,0" VerticalAlignment="Top" Width="594" FontFamily="Global User Interface" FontSize="21" Checked="A3_Checked"/>
+        <CheckBox x:Name="A4" Content="CheckBox" HorizontalAlignment="Left" Height="29" Margin="23,418,0,0" VerticalAlignment="Top" Width="594" FontFamily="Global User Interface" FontSize="21" Checked="A4_Checked"/>
+        <CheckBox x:Name="A5" Content="CheckBox" HorizontalAlignment="Left" Height="29" Margin="23,450,0,0" VerticalAlignment="Top" Width="594" FontFamily="Global User Interface" FontSize="21" Checked="A5_Checked"/>
+
+        <TextBox x:Name="W" HorizontalAlignment="Left" Height="95" Margin="23,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="673" FontFamily="Global User Interface" FontSize="21" TextChanged="W_TextChanged" Visibility="Hidden"/>
+
+        <Rectangle x:Name="Deco" Fill="White" HorizontalAlignment="Left" Height="700" Margin="843,6,0,0" RadiusY="20" RadiusX="20" VerticalAlignment="Top" Width="158"/>
+
+        <Rectangle x:Name="Finish_Test" Fill="#FFFF96FF" HorizontalAlignment="Left" Height="300" Margin="300,210,0,0" Stroke="Black" VerticalAlignment="Top" Width="680" Visibility="Hidden"/>
+        <Button x:Name="button" Content="한번만 더 살펴보죠" Style="{StaticResource X}" HorizontalAlignment="Left" Height="70" Margin="320,400,0,0" VerticalAlignment="Top" Width="300" FontSize="30" Click="button_Click" Visibility="Hidden"/>
+        <Button x:Name="button2" Content="더이상 고칠게 없어" Style="{StaticResource PassiveAir}" HorizontalAlignment="Left" Height="70" Margin="660,400,0,0" VerticalAlignment="Top" Width="300" FontSize="30" Click="button2_Click" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="40" Margin="400,250,0,0" TextWrapping="Wrap" Text="정말로 제출하시겠습니까?" VerticalAlignment="Top" Width="480" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold" TextAlignment="Center" TextDecorations="{x:Null}" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="80" Margin="400,290,0,0" TextWrapping="Wrap" Text="풀지않은 문제가 있다면&#xd;&#xa;틀리게 채점됩니다." VerticalAlignment="Top" Width="480" FontFamily="Global User Interface" FontSize="30" FontWeight="Bold" TextAlignment="Center" TextDecorations="Underline" Foreground="Red" Visibility="Hidden"/>
+
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="534" Margin="1040,6,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Rectangle x:Name="_1R1" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R2" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R3" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R4" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R5" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R6" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R7" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R8" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R9" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R10" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R11" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R12" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R13" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R14" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R15" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R16" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R17" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R18" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R19" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_1R20" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+        </ListBox>
+        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="534" Margin="1087,6,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Rectangle x:Name="_2R1" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R2" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R3" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R4" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R5" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R6" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R7" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R8" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R9" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R10" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R11" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R12" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R13" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R14" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R15" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R16" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R17" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R18" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R19" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_2R20" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+        </ListBox>
+        <ListBox x:Name="listBox3" HorizontalAlignment="Left" Height="534" Margin="1133,6,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Rectangle x:Name="_3R1" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R2" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R3" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R4" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R5" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R6" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R7" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R8" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R9" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R10" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R11" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R12" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R13" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R14" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R15" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R16" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R17" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R18" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R19" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_3R20" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+        </ListBox>
+        <ListBox x:Name="listBox4" HorizontalAlignment="Left" Height="534" Margin="1179,6,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Rectangle x:Name="_4R1" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R2" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R3" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R4" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R5" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R6" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R7" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R8" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R9" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R10" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R11" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R12" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R13" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R14" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R15" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R16" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R17" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R18" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R19" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_4R20" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+        </ListBox>
+        <ListBox x:Name="listBox5" HorizontalAlignment="Left" Height="534" Margin="1226,6,0,0" VerticalAlignment="Top" Width="36" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Rectangle x:Name="_5R1" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R2" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R3" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R4" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R5" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R6" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R7" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R8" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R9" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R10" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R11" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R12" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R13" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R14" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R15" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R16" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R17" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R18" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R19" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+            <Rectangle x:Name="_5R20" Fill="White" Width="22" Height="22" RadiusX="20" RadiusY="20"/>
+        </ListBox>
+
+        <Label x:Name="W1" Content="" HorizontalAlignment="Left" Height="23" Margin="1026,541,0,0" VerticalAlignment="Top" Width="247" FontFamily="Global User Interface" FontSize="10" Background="White"/>
+        <Label x:Name="W2" Content="" HorizontalAlignment="Left" Height="23" Margin="1026,567,0,0" VerticalAlignment="Top" Width="247" FontFamily="Global User Interface" FontSize="10" Background="White"/>
+        <Label x:Name="W3" Content="" HorizontalAlignment="Left" Height="23" Margin="1026,594,0,0" VerticalAlignment="Top" Width="247" FontFamily="Global User Interface" FontSize="10" Background="White"/>
+        <Label x:Name="W4" Content="" HorizontalAlignment="Left" Height="23" Margin="1026,620,0,0" VerticalAlignment="Top" Width="247" FontFamily="Global User Interface" FontSize="10" Background="White"/>
+        <Label x:Name="W5" Content="" HorizontalAlignment="Left" Height="23" Margin="1026,646,0,0" VerticalAlignment="Top" Width="247" FontFamily="Global User Interface" FontSize="10" Background="White"/>
+
+        <TextBlock x:Name="Start_Page" Text="&#xA;기초화학지식평가" Background="#FFF3BFBF" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280" Foreground="White" FontFamily="Global User Interface" FontSize="80" TextAlignment="Center" UseLayoutRounding="False"/>
+        <Label x:Name="S1" Content="문제" Margin="0,230,0,360" Foreground="White" FontFamily="Global User Interface" FontSize="54" HorizontalAlignment="Center"/>
+        <Label x:Name="S2" Content="객관식 20개" Margin="0,300,0,330" Foreground="White" FontFamily="Global User Interface" FontSize="62" HorizontalAlignment="Center"/>
+        <Label x:Name="S3" Content="주관식 05개" Margin="0,390,0,240" Foreground="White" FontFamily="Global User Interface" FontSize="62" HorizontalAlignment="Center"/>
+        <Button x:Name="Start" Content="시작!" Style="{StaticResource MidMetal}" Margin="150,530,150,100" FontFamily="Global User Interface" FontWeight="Bold" FontSize="45" Click="Start_Click" IsDefault="True" Visibility="Visible"/>
+        <Button x:Name="Mistake" Content="잘못 눌렀다면 이곳을 누르세요." Style="{StaticResource X}" Margin="150,630,150,20" FontFamily="Global User Interface" FontSize="22" Click="Mistake_Click" FontWeight="Bold" IsCancel="True" Visibility="Visible"/>
+    </Grid>
+</Window>

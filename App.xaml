@@ -1,0 +1,199 @@
+﻿<Application x:Class="MyFriendChemistry.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyFriendChemistry"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate TargetType="Button" x:Key="ALC">
+            <Border Background="#FFF0F06B">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        
+        <Style TargetType="Button" x:Key="Alcaly">
+            <Setter Property="Template" Value="{StaticResource ALC}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="NON">
+            <Border Background="#FF94F5FF">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        
+        <Style TargetType="Button" x:Key="NonMetal">
+            <Setter Property="Template" Value="{StaticResource NON}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="MID">
+            <Border Background="#FF00FF8C">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="MidMetal">
+            <Setter Property="Template" Value="{StaticResource MID}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="AFM">
+            <Border Background="#FFB4A4FF">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        
+        <Style TargetType="Button" x:Key="AfterMetal">
+            <Setter Property="Template" Value="{StaticResource AFM}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="MET">
+            <Border Background="#FFF3BFBF">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="Metal">
+            <Setter Property="Template" Value="{StaticResource MET}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="LND">
+            <Border Background="#FFE2B453">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="LandAlcaly">
+            <Setter Property="Template" Value="{StaticResource LND}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="HAL">
+            <Border Background="#FF78E048">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="Halogen">
+            <Setter Property="Template" Value="{StaticResource HAL}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="LAN">
+            <Border Background="#FFBCE889">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="Lantan">
+            <Setter Property="Template" Value="{StaticResource LAN}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="ACT">
+            <Border Background="#FFF568C8">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="Actinium">
+            <Setter Property="Template" Value="{StaticResource ACT}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="PSA">
+            <Border Background="#FF6C80FF">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="PassiveAir">
+            <Setter Property="Template" Value="{StaticResource PSA}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="UND">
+            <Border Background="White">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="Undefined">
+            <Setter Property="Template" Value="{StaticResource UND}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="CLS">
+            <Border Background="Red" CornerRadius="5">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="X">
+            <Setter Property="Template" Value="{StaticResource CLS}"></Setter>
+        </Style>
+        
+        <ControlTemplate TargetType="Button" x:Key="ch_Board1">
+            <Border Background="#FF94F5FF" CornerRadius="80">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHB1">
+            <Setter Property="Template" Value="{StaticResource ch_Board1}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="ch_Board2">
+            <Border Background="#FFF3BFBF" CornerRadius="80">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHB2">
+            <Setter Property="Template" Value="{StaticResource ch_Board2}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="ch_Board3">
+            <Border Background="#FFBCE889" CornerRadius="80">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHB3">
+            <Setter Property="Template" Value="{StaticResource ch_Board3}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="ch_Board4">
+            <Border Background="#FFF568C8" CornerRadius="80">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHB4">
+            <Setter Property="Template" Value="{StaticResource ch_Board4}"></Setter>
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="ch_Board5">
+            <Border Background="LightGray" CornerRadius="80">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHB5">
+            <Setter Property="Template" Value="{StaticResource ch_Board5}"></Setter>
+        </Style>
+
+
+        <ControlTemplate TargetType="Button" x:Key="ch_BoardX">
+            <Border Background="Red" CornerRadius="32">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHBX">
+            <Setter Property="Template" Value="{StaticResource ch_BoardX}"></Setter>
+        </Style>
+
+
+        <ControlTemplate TargetType="Button" x:Key="ch_Boardi">
+            <Border Background="Silver" CornerRadius="32">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="Button" x:Key="CHBI">
+            <Setter Property="Template" Value="{StaticResource ch_Boardi}"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
